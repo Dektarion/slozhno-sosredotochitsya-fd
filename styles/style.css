@@ -1,5 +1,75 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* !common */
+
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  padding-inline: var(--page-padding, 10px);
+  background-image: var(--bg-image, url(../images/cover-image-dark.png));
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--bg-color, #000028);
+  font-family: var(--main-font, 'IBM Plex mono'), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
+
+/* ?header */
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  position: relative;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding-block: var(--page-padding, 10px);
+}
+
+.header__decorated-item {
+  position: absolute;
+  inset-block-start: var(--page-padding, 10px);
+  inset-inline-end: calc(var(--inline-size-corner, 25px) + 3px);
+  color: var(--accent-color, #ff0070);
+  text-transform: uppercase;
+}
+
+.header__decorated-item::after {
+  content: '';
+  position: absolute;
+  inline-size: 9px;
+  block-size: 9px;
+  inset-block-start: 8px;
+  margin-inline-start: 10px;
+  background-color: var(--accent-color, #ff0070);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color, #ff0070);
+}
+
+
+
+
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inline-size: var(--inline-size-corner, 25px);
+  block-size: var(--inline-size-corner, 25px);
+  inset-block-start: var(--page-padding, 10px);
+  inset-inline-end: 0;
+  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inline-size: var(--inline-size-corner, 25px);
+  block-size: var(--inline-size-corner, 25px);
+  inset-block-end: var(--page-padding, 10px);
+  inset-inline-start: 0;
+  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--accent-color, #ff0070);
+}
+
+
