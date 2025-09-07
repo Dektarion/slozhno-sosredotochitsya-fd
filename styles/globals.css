@@ -19,6 +19,7 @@ h4,
 h5,
 h6,
 p {
+  font-size: inherit;
   margin: 0;
 }
 
@@ -28,6 +29,7 @@ ul {
   list-style: none;
 }
 
+figure,
 picture {
   margin: 0;
   padding: 0;
