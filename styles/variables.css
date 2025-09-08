@@ -1,6 +1,10 @@
+/* !common */
 
 :root {
+  /* Основной шрифт */
   --main-font: 'IBM Plex mono';
+
+  /* основные цвета темной темы */
   --bg-color: #000028;
   --accent-color: #ff0070;
   --section-title-color: #ff0070;
@@ -8,13 +12,58 @@
   --subtitle-text-color: #000028;
   --title-text-color: #db00ff;
   --btn-hover-color: #ff007066;
+
+  /* Изображение для подложки */
   --bg-image: url(../images/cover-image-dark.png);
+
+  /* Вся страница */
+  /* Внутренние отступы */
   --page-padding: 10px;
-  --inline-size-corner: 25px;
+
+  /* Хедер и футер */
+  /* Минимальный размер секции */
   --min-block-size: 668px;
+
+  /* Внешний нижний отступ */
   --margin-block-end: 40px;
-  --section-margin-block-end: 2.75em;
-  --common-gap: 20px;
-  --img-gallery-gap: 10px;
+
+  /* Размер блока с заголовком */
   --title-heigh: 192px;
+
+  /* Размеры декоративных элементов */
+  --inline-size-corner: 25px;
+
+  /* Контентные секции */
+  /* Внешний нижний отступ */
+  --section-margin-block-end: 2.75em;
+
+  /* Внутренние grid отступы */
+  --common-gap: 20px;
+
+  /* Внутренние отступы внутри галлереи изображений */
+  --img-gallery-gap: 10px;
+}
+
+/* ?tablet */
+/* Изменение отступов и размера заголовка для страницы для планшета */
+
+@media (width >= 768px) {
+  :root {
+    --page-padding: 20px;
+    --min-block-size: 1024px;
+    --margin-block-end: 60px;
+    --title-heigh: 99px;
+    --section-margin-block-end: 4.4444em;
+    --img-gallery-gap: 20px;
+  }
+}
+
+/* ?desktop */
+/* Изменение отступов и размера заголовка для страницы для десктопа */
+
+@media (width >= 1024px) {
+  :root {
+    --min-block-size: 768px;
+    --title-heigh: 130px;
+  }
 }
